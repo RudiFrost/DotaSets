@@ -12,9 +12,11 @@ security.init_app(app)
 
 babel = Babel(app)
 
+
 @babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 
 @app.route('/', methods=['GET'])
 def home():

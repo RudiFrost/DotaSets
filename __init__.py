@@ -5,9 +5,10 @@ from .models import User
 from .auth import auth as auth_blueprint
 from .main import main as main_blueprint
 from flask_babel import Babel
-
+from .models import Gifs_of_skins
 
 db = SQLAlchemy()
+
 
 def create_app():
     app = Flask(__name__)
