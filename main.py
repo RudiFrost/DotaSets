@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 from .models import Avatars_of_skins
 from .data import db_session
-from .models import User
+from .models import User, Gifs_of_skins, Avatars_of_skins
 
 main = Blueprint('main', __name__)
 db = SQLAlchemy()
@@ -14,7 +14,9 @@ api = Api(main)
 
 @main.route('/')
 def index():
-    return render_template("index.html", nick=User.query.all())
+    avatars = Avatars_of_skins.query.all()
+    gifs = Gifs_of_skins.query.all()
+    return render_template("index.html", ava=avatars, gif=gifs)
 
 
 @main.route('/profile', methods=['GET', 'POST'])
@@ -36,34 +38,11 @@ def change_password():
     return render_template('profile.html')
 
 
-@main.route('/invoker')
-def invoker_set():
-    db_sess = db_session.create_session()
-    return render_template('invoker.html')
-
-
-@main.route('/bloodseeker')
-def bloodseeker_set():
-    db_sess = db_session.create_session()
-    return render_template('bloodseeker.html')
-
-
-@main.route('/earthshaker')
-def earthshaker_set():
-    db_sess = db_session.create_session()
-    return render_template('earthshaker.html')
-
-
-@main.route('/enigma')
-def enigma_set():
-    db_sess = db_session.create_session()
-    return render_template('enigma.html')
-
-
-@main.route('/phantom_lancer')
-def phantom_lancer_set():
-    db_sess = db_session.create_session()
-    return render_template('phantom_lancer.html')
+@main.route('/<variable>')
+def hero(variable):
+    avatars = Avatars_of_skins.query.all()
+    gifs = Gifs_of_skins.query.all()
+    return render_template('hero.html', ava=avatars, gif=gifs)
 
 
 @main.route('/')
