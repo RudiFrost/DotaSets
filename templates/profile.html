@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="auth">
+    <font color="#ffffff">Profile</font>
+</h1>
+<div class="main-profile">
+    <div class="about-me">
+        <p class="profile">
+            <form action="input1.php" method="post" name="test">
+                <p><b>{{ _('Username') }}: {{ current_user.name }} </b></p>
+                <p><b>{{ _('Email') }}: {{ current_user.email }}</b></p>
+                <p><b>{{ _('Age') }}: 19</b></p>
+            </form>
+        </p>
+    </div>
+    <div class="avatar">
+        <img src="{{ nick[1] }}" alt="">
+    </div>
+</div>
+
+{% endblock %}
