@@ -13,5 +13,12 @@ class User(UserMixin, db.Model):
 
 
 class Avatars_of_skins(db.Model):
-    hero_name = db.Column(db.Text, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    hero_name = db.Column(db.String(100))
+    image_link = db.Column(db.String(100))
 
+
+class Gifs_of_skins(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    hero_name = db.Column(db.String(100))
+    gif_link = db.Column(db.String(100))
