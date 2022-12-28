@@ -25,7 +25,7 @@ class Heroes(Resource):
         return "Quote not found"
 
 
-api.add_resource(Heroes, "/api/heroes", "/api/heroes/", "/api/heroes/<int:id>")
+api.add_resource(Heroes, "/api/heroes", "/api/heroes/random", "/api/heroes/<int:id>")
 api.init_app(main)
 
 
