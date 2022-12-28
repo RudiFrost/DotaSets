@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 from .data import db_session
 from .models import User, Gifs_of_skins, Avatars_of_skins
+from .test_db import test_abaddon
 
 main = Blueprint('main', __name__)
 db = SQLAlchemy()
@@ -73,3 +74,9 @@ def searching():
     args = request.args.get("search")
     avatars_of_skins = Avatars_of_skins.query.filter_by(hero_name=args).one()
     return redirect(f"/{avatars_of_skins.hero_name}")
+
+
+@main.route('/test')
+def arg():
+    test_abaddon()
+    return {"time": "time"}
