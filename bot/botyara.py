@@ -74,7 +74,7 @@ def bot_message(message):
                            parse_mode='MarkdownV2', reply_markup=markup
                            )
         except:
-            bot.send_message(message.chat.id, "Hero doesn't exist", reply_markup=markup)
+            bot.send_message(message.chat.id, "Hero doesn't exist on our site", reply_markup=markup)
 
 
 @bot.message_handler(content_types=['text'])
@@ -102,7 +102,7 @@ def bot_message(message):
                            parse_mode='MarkdownV2', reply_markup=markup
                            )
         except:
-            bot.send_message(message.chat.id, "Hero doesn't exist", reply_markup=markup)
+            bot.send_message(message.chat.id, "Hero doesn't exist on our site", reply_markup=markup)
 
     elif message.text.isdigit():
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
