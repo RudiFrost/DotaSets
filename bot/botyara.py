@@ -18,8 +18,9 @@ def start_message(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     answer1 = types.KeyboardButton('Main information about hero')
     answer2 = types.KeyboardButton('Information about matches')
-    markup.add(answer1, answer2)
-    bot.send_message(message.chat.id, 'What do you want /start', reply_markup=markup)
+    answer3 = types.KeyboardButton("/random")
+    markup.add(answer1, answer2, answer3)
+    bot.send_message(message.chat.id, "What do you want /start \n If you don't know what you want /random", reply_markup=markup)
 
 
 @bot.message_handler(func=lambda message: message.text == 'Main information about hero')
@@ -59,7 +60,8 @@ def bot_message(message):
                 r = "Legion Commander"
             answer1 = types.KeyboardButton('Main information about hero')
             answer2 = types.KeyboardButton('Information about matches')
-            markup.add(answer1, answer2)
+            answer3 = types.KeyboardButton("/random")
+            markup.add(answer1, answer2, answer3)
             bot.send_photo(message.chat.id, photo, caption="Id: " + str(templates[r]["id"]) + "\n" +
                                                            "Hero command name: `" + templates[r][
                                                                "name"] + "`\n" +
@@ -86,7 +88,8 @@ def bot_message(message):
             photo = open('../static/avatars/' + message.text + '_ava.png', 'rb')
             answer1 = types.KeyboardButton('Main information about hero')
             answer2 = types.KeyboardButton('Information about matches')
-            markup.add(answer1, answer2)
+            answer3 = types.KeyboardButton("/random")
+            markup.add(answer1, answer2, answer3)
             bot.send_photo(message.chat.id, photo, caption="Id: " + str(templates[message.text]["id"]) + "\n" +
                                                            "Hero command name: `" + templates[message.text][
                                                                "name"] + "`\n" +
@@ -105,7 +108,8 @@ def bot_message(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         answer1 = types.KeyboardButton('Main information about hero')
         answer2 = types.KeyboardButton('Information about matches')
-        markup.add(answer1, answer2)
+        answer3 = types.KeyboardButton("/random")
+        markup.add(answer1, answer2, answer3)
         try:
             get_match(message.text)
 
