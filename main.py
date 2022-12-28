@@ -19,7 +19,7 @@ class Heroes(Resource):
         for name in heroes:
             if (name.id == id):
                 return {"id": name.id, "hero_name": name.hero_name}
-            if name:
+            if (name.id  == "random"):
                 quote = random.choice(heroes)
                 return {"id": quote.id, "hero_name": name.hero_name}
         return "Quote not found"
