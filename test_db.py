@@ -6,7 +6,7 @@ def test_abaddon():
     id = hero[0].id
     name = hero[0].hero_name
     gif = hero[0].gif_link
-    if (id == 1) and (name == 'abaddon') and (gif == 'static/gifs/abaddon.gif'):
+    if (id == '1') and (name == 'abaddon') and (gif == 'static/gifs/abaddon.gif'):
         print("OK")
     else:
         print("NO OK")
