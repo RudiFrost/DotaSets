@@ -19,13 +19,13 @@ class Heroes(Resource):
         for name in heroes:
             if (name.id == id):
                 return {"id": name.id, "hero_name": name.hero_name}
-            if name:
+            if (id  == 0):
                 quote = random.choice(heroes)
-                return {"id": quote.id, "hero_name": name.hero_name}
+                return {"id": quote.id, "hero_name": quote.hero_name}
         return "Quote not found"
 
 
-api.add_resource(Heroes, "/api/heroes", "/api/heroes/", "/api/heroes/<int:id>")
+api.add_resource(Heroes, "/api/heroes", "/api/heroes/random", "/api/heroes/<int:id>")
 api.init_app(main)
 
 

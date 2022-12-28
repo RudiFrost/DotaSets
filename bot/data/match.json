@@ -1,0 +1,137 @@
+{
+    "match_id": 6931200666,
+    "barracks_status_dire": 63,
+    "barracks_status_radiant": 0,
+    "chat": null,
+    "cluster": 186,
+    "cosmetics": null,
+    "dire_score": 46,
+    "dire_team_id": null,
+    "draft_timings": null,
+    "duration": 2584,
+    "engine": 1,
+    "first_blood_time": 147,
+    "game_mode": 22,
+    "human_players": 10,
+    "leagueid": 0,
+    "lobby_type": 7,
+    "match_seq_num": 5812769590,
+    "negative_votes": 0,
+    "objectives": null,
+    "picks_bans": [
+        {
+            "is_pick": true,
+            "hero_id": "Shadow Shaman",
+            "team": "Dire",
+            "order": 0
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Witch Doctor",
+            "team": "Dire",
+            "order": 1
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Treant Protector",
+            "team": "Radiant",
+            "order": 2
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Pudge",
+            "team": "Radiant",
+            "order": 3
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Bounty Hunter",
+            "team": "Dire",
+            "order": 4
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Leshrac",
+            "team": "Dire",
+            "order": 5
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Dawnbreaker",
+            "team": "Radiant",
+            "order": 6
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Lifestealer",
+            "team": "Radiant",
+            "order": 7
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Invoker",
+            "team": "Radiant",
+            "order": 8
+        },
+        {
+            "is_pick": true,
+            "hero_id": "Monkey King",
+            "team": "Dire",
+            "order": 9
+        },
+        {
+            "is_pick": false,
+            "hero_id": 12,
+            "team": 0,
+            "order": 10
+        },
+        {
+            "is_pick": false,
+            "hero_id": 75,
+            "team": 0,
+            "order": 11
+        },
+        {
+            "is_pick": false,
+            "hero_id": 15,
+            "team": 0,
+            "order": 12
+        },
+        {
+            "is_pick": false,
+            "hero_id": 41,
+            "team": 0,
+            "order": 13
+        },
+        {
+            "is_pick": false,
+            "hero_id": 47,
+            "team": 0,
+            "order": 14
+        },
+        {
+            "is_pick": false,
+            "hero_id": 11,
+            "team": 1,
+            "order": 15
+        }
+    ],
+    "positive_votes": 0,
+    "radiant_gold_adv": null,
+    "radiant_score": 29,
+    "radiant_team_id": null,
+    "radiant_win": "Dire",
+    "radiant_xp_adv": null,
+    "skill": null,
+    "start_time": 1671727561,
+    "teamfights": null,
+    "tower_status_dire": 1974,
+    "tower_status_radiant": 0,
+    "version": null,
+    "replay_salt": 899823300,
+    "series_id": 0,
+    "series_type": 0,
+    "patch": 51,
+    "region": 8,
+    "replay_url": "http://replay186.valve.net/570/6931200666_899823300.dem.bz2"
+}
